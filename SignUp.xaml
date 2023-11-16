@@ -1,0 +1,17 @@
+﻿<Window x:Class="Acadamy.SignUp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Acadamy"
+        mc:Ignorable="d"
+        Title="SignUp" Height="413" Width="370">
+    <Grid>
+        <Button Content="Sign Up" HorizontalAlignment="Center" Margin="0,279,0,0" VerticalAlignment="Top" Height="24" Width="54" Click="Button_Click"/>
+        <TextBox x:Name="username" HorizontalAlignment="Center" Margin="0,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox x:Name="passbox1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="120"/>
+        <PasswordBox x:Name="passbox2" HorizontalAlignment="Center" Margin="0,220,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="role" HorizontalAlignment="Center" Margin="0,144,0,0" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>
