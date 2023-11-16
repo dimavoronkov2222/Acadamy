@@ -7,11 +7,13 @@
         mc:Ignorable="d"
         Title="SignUp" Height="413" Width="370">
     <Grid>
-        <Button Content="Sign Up" HorizontalAlignment="Center" Margin="0,279,0,0" VerticalAlignment="Top" Height="24" Width="54" Click="Button_Click"/>
-        <TextBox x:Name="username" HorizontalAlignment="Center" Margin="0,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Sign Up" HorizontalAlignment="Center" Margin="0,278,0,0" VerticalAlignment="Top" Height="48" Width="120" Click="Button_Click" FontFamily="Segoe Print"/>
+        <TextBox x:Name="username" HorizontalAlignment="Center" Margin="0,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Segoe Print" FontSize="14"/>
         <PasswordBox x:Name="passbox1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="120"/>
         <PasswordBox x:Name="passbox2" HorizontalAlignment="Center" Margin="0,220,0,0" VerticalAlignment="Top" Width="120"/>
-        <ComboBox x:Name="role" HorizontalAlignment="Center" Margin="0,144,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="role" HorizontalAlignment="Center" Margin="0,144,0,0" VerticalAlignment="Top" Width="120" FontFamily="Segoe Print" FontSize="14"/>
+        <Label Content="Username" HorizontalAlignment="Left" Margin="26,85,0,0" VerticalAlignment="Top" FontFamily="Segoe Print" FontSize="14"/>
+        <Label Content="Role" HorizontalAlignment="Left" Margin="28,145,0,0" VerticalAlignment="Top" FontFamily="Segoe Print" FontSize="14"/>
 
     </Grid>
 </Window>

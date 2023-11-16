@@ -18,9 +18,11 @@ namespace Acadamy
     /// </summary>
     public partial class SignUp : Window
     {
+        UsersList list;
         public SignUp()
         {
             InitializeComponent();
+            list = new UsersList();
             ComboBoxItem item = new ComboBoxItem();
             item.Content = "Admin";
             role.Items.Add(item);
@@ -37,6 +39,40 @@ namespace Acadamy
             {
                 string Username = username.Text;
                 string pass = passbox1.Password;
+                int roleuser = 0;
+                string selectedText = null;
+                if (role.SelectedItem != null)
+                {
+                    ComboBoxItem selectedItem = (ComboBoxItem)role.SelectedItem;
+                    selectedText = selectedItem.Content.ToString();
+                    if(selectedText == "Admin")
+                    {
+                        roleuser = 1;
+                        list.AddUser(new Users(Username, pass, roleuser));
+                    }
+                    else if (selectedText == "Teacher")
+                    {
+                        roleuser = 2;
+                        list.AddUser(new Users(Username, pass, roleuser));
+                    }
+                    else if(selectedText == "Student")
+                    {
+                        roleuser = 3;
+                        list.AddUser(new Users(Username, pass, roleuser));
+                    }
+                    else
+                    {
+                        MessageBox.Show("Something went wrong", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                }
+                if (list.users.Count > 0)
+                {
+                    MessageBox.Show("В списке есть пользователи.");
+                }
+                else
+                {
+                    Console.WriteLine("Список пользователей пуст.");
+                }
             }
             else
             {

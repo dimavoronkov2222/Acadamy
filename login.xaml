@@ -3,15 +3,21 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+        FontFamily="{materialDesign:MaterialDesignFont}"
         xmlns:local="clr-namespace:Acadamy"
         mc:Ignorable="d"
-        Title="login" Height="181" Width="434">
+        Title="login" Height="214" Width="434">
     <Grid>
-        <Label Content="Password" HorizontalAlignment="Center" Margin="0,72,0,0" VerticalAlignment="Top"/>
-        <PasswordBox x:Name="PasswordBox" HorizontalAlignment="Center" Margin="0,103,0,0" VerticalAlignment="Top" Width="366"/>
-        <Button Content="Sign in" HorizontalAlignment="Left" Margin="327,126,0,0" VerticalAlignment="Top" Width="45" Click="signin"/>
-        <Label Content="Username" HorizontalAlignment="Left" Margin="183,10,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="usernamebox" HorizontalAlignment="Left" Margin="32,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="366"/>
-        <Button Content="Sign up" HorizontalAlignment="Left" Margin="73,126,0,0" VerticalAlignment="Top" Click="signup"/>
+        <Label Content="Password" HorizontalAlignment="Center" Margin="0,80,0,0" VerticalAlignment="Top" FontFamily="Segoe Print" FontSize="14"/>
+        <PasswordBox x:Name="passwordbox" HorizontalAlignment="Left" Margin="45,120,0,0" VerticalAlignment="Top" Width="366"/>
+        <Button Content="Sign in" HorizontalAlignment="Left" Margin="304,148,0,0" VerticalAlignment="Top" Width="85" Click="signin" FontFamily="Segoe Print"/>
+        <Label Content="Username" HorizontalAlignment="Left" Margin="176,14,0,0" VerticalAlignment="Top" FontFamily="Segoe Print" FontSize="14"/>
+        <TextBox x:Name="usernamebox" HorizontalAlignment="Left" Margin="45,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="366" FontFamily="Segoe Print"/>
+        <Button Content="Sign up" HorizontalAlignment="Left" Margin="72,148,0,0" VerticalAlignment="Top" Click="signup" FontFamily="Segoe Print"/>
     </Grid>
 </Window>
