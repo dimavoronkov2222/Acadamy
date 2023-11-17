@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Acadamy.Teacher
 {
     /// <summary>
-    /// Логика взаимодействия для HW_LAB_from_students.xaml
+    /// Interaction logic for TeacherHomePage.xaml
     /// </summary>
-    public partial class HW_LAB_from_students : Window
+    public partial class TeacherHomePage : Page
     {
-        public HW_LAB_from_students()
+        public TeacherHomePage()
         {
             InitializeComponent();
         }

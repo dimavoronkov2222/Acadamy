@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Acadamy.Admin
+namespace Acadamy.Student
 {
     /// <summary>
-    /// Логика взаимодействия для CRUD_Screen_Lecturers.xaml
+    /// Interaction logic for StudentHomePage.xaml
     /// </summary>
-    public partial class CRUD_Screen_Lecturers : Window
+    public partial class StudentHomePage : Page
     {
-        public CRUD_Screen_Lecturers()
+        public StudentHomePage()
         {
             InitializeComponent();
         }

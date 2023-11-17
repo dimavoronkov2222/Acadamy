@@ -1,50 +1,58 @@
 ﻿using Acadamy.Admin;
-using Acadamy.Student;
-using Acadamy.Teacher;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using MahApps.Metro.Controls.Dialogs;
+using MaterialDesignThemes.Wpf;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-
+using System.Windows.Navigation;
 namespace Acadamy
 {
-    /// <summary>
-    /// Логика взаимодействия для login.xaml
-    /// </summary>
     public partial class login : Window
     {
-        string Usernameadmin = "Admin";
-        string PassAdmin = "123456";
+        string adminusername = "Admin";
+        string adminpass = "123456";
+        string teacherusername = "Teacher";
+        string teacherpass = "123456";
+        string studentusername = "Student";
+        string studentpass = "123456";
         public login()
         {
             InitializeComponent();
+            ComboBoxItem item = new ComboBoxItem();
+            item.Content = "Admin";
+            role.Items.Add(item);
+            ComboBoxItem item1 = new ComboBoxItem();
+            item1.Content = "Teacher";
+            role.Items.Add(item1);
+            ComboBoxItem item2 = new ComboBoxItem();
+            item2.Content = "Student";
+            role.Items.Add(item2);
         }
         private void signin(object sender, RoutedEventArgs e)
         {
-            string USername = usernamebox.Text;
+            string Username = usernamebox.Text;
             string Pass = passwordbox.Password;
-            if (Usernameadmin == usernamebox.Text)
+            string role = ((ComboBoxItem)this.role.SelectedItem).Content.ToString();
+            if (role == "Admin" && Username == adminusername && Pass == adminpass)
             {
-                if (PassAdmin == Pass)
-                {
-                    AdminHome adminHome = new AdminHome();
-                    adminHome.Show();
-                }
+                AdminHomePage adminHome = new AdminHomePage();
+                Grid.SetZIndex(MainFrame, 1);
+                MainFrame.Navigate(adminHome);
+                
             }
-        }
-        private void signup(object sender, RoutedEventArgs e)
-        {
-            SignUp signUp = new SignUp();
-            signUp.ShowDialog();
+            else if (role == "Teacher" && Username == teacherusername && Pass == teacherpass)
+            {
+
+                Grid.SetZIndex(MainFrame, 1);
+            }
+            else if (role == "Student" && Username == studentusername && Pass == studentpass)
+            {
+
+                Grid.SetZIndex(MainFrame, 1);
+            }
+            else
+            {
+                MessageBox.Show("wrong login or password", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }

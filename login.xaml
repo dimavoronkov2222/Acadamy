@@ -11,13 +11,15 @@
         FontFamily="{materialDesign:MaterialDesignFont}"
         xmlns:local="clr-namespace:Acadamy"
         mc:Ignorable="d"
-        Title="login" Height="214" Width="434">
+        Title="login" Height="336" Width="434">
     <Grid>
-        <Label Content="Password" HorizontalAlignment="Center" Margin="0,80,0,0" VerticalAlignment="Top" FontFamily="Segoe Print" FontSize="14"/>
-        <PasswordBox x:Name="passwordbox" HorizontalAlignment="Left" Margin="45,120,0,0" VerticalAlignment="Top" Width="366"/>
-        <Button Content="Sign in" HorizontalAlignment="Left" Margin="304,148,0,0" VerticalAlignment="Top" Width="85" Click="signin" FontFamily="Segoe Print"/>
+        <Frame x:Name="MainFrame" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <Label Content="Password" HorizontalAlignment="Center" Margin="0,173,0,0" VerticalAlignment="Top" FontFamily="Segoe Print" FontSize="14"/>
+        <PasswordBox x:Name="passwordbox" HorizontalAlignment="Center" Margin="0,235,0,0" VerticalAlignment="Top" Width="366"/>
+        <Button Content="Sign in" HorizontalAlignment="Left" Margin="180,263,0,0" VerticalAlignment="Top" Width="84" Click="signin" FontFamily="Segoe Print"/>
         <Label Content="Username" HorizontalAlignment="Left" Margin="176,14,0,0" VerticalAlignment="Top" FontFamily="Segoe Print" FontSize="14"/>
-        <TextBox x:Name="usernamebox" HorizontalAlignment="Left" Margin="45,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="366" FontFamily="Segoe Print"/>
-        <Button Content="Sign up" HorizontalAlignment="Left" Margin="72,148,0,0" VerticalAlignment="Top" Click="signup" FontFamily="Segoe Print"/>
+        <TextBox x:Name="usernamebox" HorizontalAlignment="Center" Margin="0,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="366" FontFamily="Segoe Print"/>
+        <ComboBox x:Name="role" HorizontalAlignment="Center" Margin="0,137,0,0" VerticalAlignment="Top" Width="344" FontFamily="Segoe Print" FontSize="14"/>
+        <Label Content="Role" HorizontalAlignment="Center" Margin="0,87,0,0" VerticalAlignment="Top" FontFamily="Segoe Print" FontSize="14"/>
     </Grid>
 </Window>

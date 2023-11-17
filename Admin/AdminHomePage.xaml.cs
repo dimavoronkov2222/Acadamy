@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Acadamy.Student
+namespace Acadamy.Admin
 {
     /// <summary>
-    /// Логика взаимодействия для Schedules_screen.xaml
+    /// Interaction logic for AdminHomePage.xaml
     /// </summary>
-    public partial class Schedules_screen : Window
+    public partial class AdminHomePage : Page
     {
-        public Schedules_screen()
+        public AdminHomePage()
         {
             InitializeComponent();
         }
