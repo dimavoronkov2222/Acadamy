@@ -23,6 +23,8 @@ namespace Acadamy.Student
         public StudentHomePage()
         {
             InitializeComponent();
+            listschool.ItemsSource = SharedData.Instance.ListBoxItems;
+            DZ_LAB.ItemsSource = SharedData.Instance.ListBoxItems;
         }
     }
 }

@@ -1,6 +1,8 @@
-﻿using Azure;
+﻿using Acadamy.Student;
+using Azure;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +22,28 @@ namespace Acadamy.Teacher
     /// </summary>
     public partial class TeacherHomePage : Page
     {
+        private ObservableCollection<string> listBoxItems;
         public TeacherHomePage()
         {
             InitializeComponent();
+            listschool.ItemsSource = SharedData.Instance.ListBoxItems;
+            listBoxItems = new ObservableCollection<string>();
+            DZ_LAB.ItemsSource = listBoxItems;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var selectedItem = Group.SelectedItem as ComboBoxItem;
+            string selectedText = selectedItem != null ? selectedItem.Content.ToString() : string.Empty;
+            string textBoxContent = textBox.Text;
+            if (!string.IsNullOrEmpty(selectedText) && !string.IsNullOrEmpty(textBoxContent))
+            {
+                listBoxItems.Add($"{selectedText}: {textBoxContent}");
+            }
+            else
+            {
+                MessageBox.Show("Пожалуйста, выберите элемент и введите текст");
+            }
         }
     }
 }

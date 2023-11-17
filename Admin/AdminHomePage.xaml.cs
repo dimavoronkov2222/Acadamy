@@ -23,12 +23,10 @@ namespace Acadamy.Admin
     /// </summary>
     public partial class AdminHomePage : Page
     {
-        private ObservableCollection<string> listBoxItems;
         public AdminHomePage()
         {
             InitializeComponent();
-            listBoxItems = new ObservableCollection<string>();
-            listschool.ItemsSource = listBoxItems;
+            listschool.ItemsSource = SharedData.Instance.ListBoxItems;
 
         }
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -38,24 +36,12 @@ namespace Acadamy.Admin
             string textBoxContent = textBox.Text;
             if (!string.IsNullOrEmpty(selectedText) && !string.IsNullOrEmpty(textBoxContent))
             {
-                listBoxItems.Add($"{selectedText}: {textBoxContent}");
+                SharedData.Instance.ListBoxItems.Add($"{selectedText}: {textBoxContent}");
             }
             else
             {
                 MessageBox.Show("Пожалуйста, выберите элемент и введите текст");
             }
-        }
-        private void Teacherpage(object sender, RoutedEventArgs e)
-        {
-            TeacherHomePage teacherHome = new TeacherHomePage();
-            Grid.SetZIndex(AdminFrame, 1);
-            AdminFrame.Navigate(teacherHome);
-        }
-        private void Studentpage(object sender, RoutedEventArgs e)
-        {
-            StudentHomePage studentHome = new StudentHomePage();
-            Grid.SetZIndex(AdminFrame, 1);
-            AdminFrame.Navigate(studentHome);
         }
     }
 }
