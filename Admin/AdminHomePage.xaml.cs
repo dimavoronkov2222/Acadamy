@@ -40,7 +40,7 @@ namespace Acadamy.Admin
             }
             else
             {
-                MessageBox.Show("Пожалуйста, выберите элемент и введите текст");
+                MessageBox.Show("Please select an item and enter text");
             }
         }
     }

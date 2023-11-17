@@ -30,7 +30,6 @@ namespace Acadamy.Teacher
             listBoxItems = new ObservableCollection<string>();
             DZ_LAB.ItemsSource = listBoxItems;
         }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             var selectedItem = Group.SelectedItem as ComboBoxItem;
@@ -42,7 +41,7 @@ namespace Acadamy.Teacher
             }
             else
             {
-                MessageBox.Show("Пожалуйста, выберите элемент и введите текст");
+                MessageBox.Show("Please select an item and enter text");
             }
         }
     }
