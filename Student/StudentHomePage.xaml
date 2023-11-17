@@ -10,6 +10,17 @@
 
     <Grid>
         <Label Content="Hello Student" HorizontalAlignment="Left" Margin="48,48,0,0" VerticalAlignment="Top" FontFamily="Segoe Print" FontSize="14"/>
-        <Button Content="Exit" FontFamily="Segoe Print" FontSize="14" Margin="682,49,46,369"></Button>
+        <ComboBox x:Name="dayOfWeekComboBox" Margin="0,98,400,0" VerticalAlignment="Top">
+            <ComboBoxItem>Monday</ComboBoxItem>
+            <ComboBoxItem>Tuesday</ComboBoxItem>
+            <ComboBoxItem>Wednesday</ComboBoxItem>
+            <ComboBoxItem>Thursday</ComboBoxItem>
+            <ComboBoxItem>Friday</ComboBoxItem>
+            <ComboBoxItem>Saturday</ComboBoxItem>
+            <ComboBoxItem>Sunday</ComboBoxItem>
+        </ComboBox>
+        <ListBox x:Name="scheduleListBox" Margin="0,123,400,-25" FontFamily="Segoe Print" FontSize="14"/>
+        <ListBox x:Name="DZ_LAB" Margin="400,124,0,0" FontFamily="Segoe Print" FontSize="14"/>
+        <Label Content="Home Work / laboratory work" HorizontalAlignment="Left" Margin="508,78,0,0" VerticalAlignment="Top" FontFamily="Segoe Print" FontSize="14"/>
     </Grid>
 </Page>

@@ -24,14 +24,5 @@ namespace Acadamy.Teacher
         {
             InitializeComponent();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            var mainFrame = (Frame)Application.Current.MainWindow.FindName("MainFrame");
-            if (mainFrame.CanGoBack)
-            {
-                mainFrame.GoBack();
-            }
-        }
     }
 }
