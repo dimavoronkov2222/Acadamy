@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Azure;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
 namespace Acadamy.Teacher
 {
     /// <summary>
@@ -23,6 +23,15 @@ namespace Acadamy.Teacher
         public TeacherHomePage()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var mainFrame = (Frame)Application.Current.MainWindow.FindName("MainFrame");
+            if (mainFrame.CanGoBack)
+            {
+                mainFrame.GoBack();
+            }
         }
     }
 }

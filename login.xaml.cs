@@ -1,4 +1,6 @@
 ﻿using Acadamy.Admin;
+using Acadamy.Student;
+using Acadamy.Teacher;
 using MahApps.Metro.Controls.Dialogs;
 using MaterialDesignThemes.Wpf;
 using System.Windows;
@@ -41,13 +43,15 @@ namespace Acadamy
             }
             else if (role == "Teacher" && Username == teacherusername && Pass == teacherpass)
             {
-
+                TeacherHomePage teacherHome = new TeacherHomePage();
                 Grid.SetZIndex(MainFrame, 1);
+                MainFrame.Navigate(teacherHome);
             }
             else if (role == "Student" && Username == studentusername && Pass == studentpass)
             {
-
+                StudentHomePage studentHome = new StudentHomePage();
                 Grid.SetZIndex(MainFrame, 1);
+                MainFrame.Navigate(studentHome);
             }
             else
             {

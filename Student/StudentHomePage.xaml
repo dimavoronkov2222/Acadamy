@@ -6,9 +6,10 @@
       xmlns:local="clr-namespace:Acadamy.Student"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="StudentHomePage">
+      Title="StudentHomePage" Background="White">
 
     <Grid>
-        
+        <Label Content="Hello Student" HorizontalAlignment="Left" Margin="48,48,0,0" VerticalAlignment="Top" FontFamily="Segoe Print" FontSize="14"/>
+        <Button Content="Exit" FontFamily="Segoe Print" FontSize="14" Margin="682,49,46,369"></Button>
     </Grid>
 </Page>

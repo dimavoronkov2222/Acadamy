@@ -6,9 +6,30 @@
       xmlns:local="clr-namespace:Acadamy.Teacher"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="TeacherHomePage">
+      Title="TeacherHomePage" Background="White">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Hello Teacher" HorizontalAlignment="Left" Margin="48,48,0,0" VerticalAlignment="Top" FontFamily="Segoe Print" FontSize="14"/>
+        <Button Content="Exit" FontFamily="Segoe Print" FontSize="14" Margin="682,49,46,369" Click="Button_Click"></Button>
+        <ComboBox x:Name="dayOfWeekComboBox" Margin="0,98,400,0" VerticalAlignment="Top">
+            <ComboBoxItem>Monday</ComboBoxItem>
+            <ComboBoxItem>Tuesday</ComboBoxItem>
+            <ComboBoxItem>Wednesday</ComboBoxItem>
+            <ComboBoxItem>Thursday</ComboBoxItem>
+            <ComboBoxItem>Friday</ComboBoxItem>
+            <ComboBoxItem>Saturday</ComboBoxItem>
+            <ComboBoxItem>Sunday</ComboBoxItem>
+        </ComboBox>
+        <ListBox x:Name="scheduleListBox" Grid.Row="1" Margin="10">
+        </ListBox>
+        <ComboBox x:Name="DZ_LAB" Margin="400,98,0,0" VerticalAlignment="Top" Height="25">
+            <ComboBoxItem Content="Blue stars"/>
+            <ComboBoxItem Content="Sun rays"/>
+            <ComboBoxItem Content="White Rose"/>
+        </ComboBox>
     </Grid>
 </Page>
