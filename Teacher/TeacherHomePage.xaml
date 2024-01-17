@@ -7,33 +7,51 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="TeacherHomePage" Background="White">
-    <Grid>
+    <Grid Margin="14,10,10,0" RenderTransformOrigin="0.5,0.5">
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform ScaleX="1"/>
+                <SkewTransform/>
+                <RotateTransform/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Label Content="Hello Teacher" HorizontalAlignment="Left" Margin="48,48,0,0" VerticalAlignment="Top" FontFamily="Segoe Print" FontSize="14"/>
-        <ComboBox x:Name="dayOfWeekComboBox" Margin="0,98,400,0" VerticalAlignment="Top">
-            <ComboBoxItem>Monday</ComboBoxItem>
-            <ComboBoxItem>Tuesday</ComboBoxItem>
-            <ComboBoxItem>Wednesday</ComboBoxItem>
-            <ComboBoxItem>Thursday</ComboBoxItem>
-            <ComboBoxItem>Friday</ComboBoxItem>
-            <ComboBoxItem>Saturday</ComboBoxItem>
-            <ComboBoxItem>Sunday</ComboBoxItem>
-        </ComboBox>
-        <ListBox x:Name="listschool" Grid.Row="1" Margin="0,0,400,0">
+        <ListBox x:Name="Schedule" Grid.Row="1" Margin="0,60,400,0">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding CourseName}" FontSize="14"/>
+                        <TextBlock Text="{Binding DayOfWeek}" FontSize="14"/>
+                        <TextBlock Text="{Binding TimeSlot}" FontSize="14"/>
+                        <TextBlock Text="{Binding TeacherName}" FontSize="14"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
         </ListBox>
-        <ComboBox x:Name="Group" Margin="400,98,0,0" VerticalAlignment="Top" Height="25">
-            <ComboBoxItem Content="Blue stars"/>
-            <ComboBoxItem Content="Sun rays"/>
-            <ComboBoxItem Content="White Rose"/>
-        </ComboBox>
-        <ListBox x:Name="DZ_LAB" Grid.Row="1" Margin="400,0,10,0">
+        <ListBox x:Name="DZ_LAB" Grid.Row="1" Margin="380,60,10,0">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding CourseName}" FontSize="14"/>
+                        <TextBlock Text="{Binding Assignment}" FontSize="14"/>
+                        <TextBlock Text="{Binding DueDate}" FontSize="14"/>
+                        <TextBlock Text="{Binding TeacherName}" FontSize="14"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
         </ListBox>
         <Label Content="Schedule" HorizontalAlignment="Left" Margin="165,59,0,0" VerticalAlignment="Top" FontFamily="Segoe Print" FontSize="14"/>
         <Label Content="Home Work / laboratory work" HorizontalAlignment="Left" Margin="513,59,0,0" VerticalAlignment="Top" FontFamily="Segoe Print" FontSize="14"/>
         <Button Content="Add Home work / laboratory work" HorizontalAlignment="Left" Margin="238,22,0,0" VerticalAlignment="Top" FontFamily="Segoe Print" FontSize="14" Click="Button_Click"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="239,68,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="269" FontFamily="Segoe Print" FontSize="14"/>
+        <TextBox x:Name="DueDate" HorizontalAlignment="Left" Margin="238,58,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="269" FontFamily="Segoe Print" FontSize="14"/>
+        <TextBox x:Name="coursename" HorizontalAlignment="Left" Margin="39,22,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Assingment" HorizontalAlignment="Left" Margin="188,22,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="teachername" HorizontalAlignment="Center" Margin="0,22,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Homeworkid" HorizontalAlignment="Left" Margin="489,22,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
     </Grid>
 </Page>
