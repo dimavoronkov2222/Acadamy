@@ -10,17 +10,30 @@
 
     <Grid>
         <Label Content="Hello Student" HorizontalAlignment="Left" Margin="48,48,0,0" VerticalAlignment="Top" FontFamily="Segoe Print" FontSize="14"/>
-        <ComboBox x:Name="dayOfWeekComboBox" Margin="0,98,400,0" VerticalAlignment="Top">
-            <ComboBoxItem>Monday</ComboBoxItem>
-            <ComboBoxItem>Tuesday</ComboBoxItem>
-            <ComboBoxItem>Wednesday</ComboBoxItem>
-            <ComboBoxItem>Thursday</ComboBoxItem>
-            <ComboBoxItem>Friday</ComboBoxItem>
-            <ComboBoxItem>Saturday</ComboBoxItem>
-            <ComboBoxItem>Sunday</ComboBoxItem>
-        </ComboBox>
-        <ListBox x:Name="listschool" Margin="0,123,400,-25" FontFamily="Segoe Print" FontSize="14"/>
-        <ListBox x:Name="DZ_LAB" Margin="400,124,0,0" FontFamily="Segoe Print" FontSize="14"/>
+        <ListBox x:Name="DZ_LAB" Margin="427,116,0,16" HorizontalAlignment="Left" Width="363">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding CourseName}" FontSize="14"/>
+                        <TextBlock Text="{Binding Assignment}" FontSize="14"/>
+                        <TextBlock Text="{Binding DueDate}" FontSize="14"/>
+                        <TextBlock Text="{Binding TeacherName}" FontSize="14"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <ListBox x:Name="Schedule" Margin="0,132,0,0" HorizontalAlignment="Center" Width="800">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding CourseName}" FontSize="14"/>
+                        <TextBlock Text="{Binding DayOfWeek}" FontSize="14"/>
+                        <TextBlock Text="{Binding TimeSlot}" FontSize="14"/>
+                        <TextBlock Text="{Binding TeacherName}" FontSize="14"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
         <Label Content="Home Work / laboratory work" HorizontalAlignment="Left" Margin="508,78,0,0" VerticalAlignment="Top" FontFamily="Segoe Print" FontSize="14"/>
         <Label Content="Schedule" HorizontalAlignment="Left" Margin="184,62,0,0" VerticalAlignment="Top" FontFamily="Segoe Print" FontSize="14"/>
     </Grid>
